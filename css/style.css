@@ -1,0 +1,38 @@
+/* {}* применение ко всем элементам */
+body {
+    /* размер шрифта: сначала цифры, потом единицы измерения */
+    font-size: 32px;
+    margin: 0;/* внешние отступы, внутренние pudding */
+}
+/* цвета */
+/* браузер самостоятельно накладывает стили на элементы */
+.light-pink-background {
+    background-color: #EEE2DC;
+}
+.light-pink-text {
+    color:#EEE2DC;
+}
+header {
+    background-color: #AC3B61;
+}
+
+footer {
+    background-color: #123C69;
+}
+footer a{ /* ссылки только в футере */
+    color: #BAB2B5;
+}
+
+a {
+    text-decoration: none; /* у всех ссылок убрали нижнее подчеркивание */
+}
+header ul {
+    margin: 0;
+    list-style-type: none;
+}
+.container {
+   /* width: ;*/
+   max-width: 1200px;
+   /* 0 - веръ/низ auto- лево/право*/
+   margin: 0 auto;
+}

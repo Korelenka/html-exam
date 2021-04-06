@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета</title>
+    <link rel="icon" href="art/flying_rocket_icon_182802.ico" type="image/x-icon" >
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/flexbox-gridlayout.css">
+   
+    
+</head>
+<body> 
+    <header>
+        <nav><!--навигация-->
+            <a href="index1.html">Главная</a> <!--ссылка -->
+            <a href="description.html">Описание</a> <!--заглушка -->
+            <a href="anketa.html">Форма</a>
+
+        </nav> 
+    </header> 
+    <article><h3>Введите Ваши данные</h3>
+    <div>
+    <form display: "flex" enctype="multipart/form-data" action="#" method="post" id="anketa">
+            <div>
+    <div><label for="title">Введите имя</label>
+                <input id="title" type="text" minlength="13" maxlength="100" name="title">
+            </div>
+            <div>
+    <p> <label for="title">Введите фамилию </label>
+    <input id="title" type="text" minlength="13" maxlength="100" name="title"></p>
+    <p>Email: <input type="email" name="login"></p>
+    <p> <label for="genre">Город проживания</label> 
+                <select id="genre"name="genre"> 
+                    <option value="genre1">Москва</option> 
+                    <option value="genre2">Санкт-Петерубрг</option>
+                    <option value="genre3">Тверь</option>
+                </select>
+    </p>
+            </div>
+            </div>
+            
+            <div>
+                <label for="page-count">Дата рождения</label>
+                <input id="page-count" <input type="date" name="calendar"> >
+            </div>
+            <div>
+            <p>   <label for="">О себе</label>
+                <textarea name="description" placeholder="Укажите информацию о себе" id="" cols="30" rows="5"></textarea> 
+            </div></p>
+            <div>
+            <p>  <label for="cover">Загрузить документ</label>
+                <input id="cover" type="file" name="cover" multiple accept="image/*, image/jpeg"  >  
+            </p> <div> <!--группа чек боксов-->
+            <p>   <span>Возраст детей</span> 
+                <label> <input type="checkbox" value="1" name="age[]" >до 1 года</label>
+                <label> <input type="checkbox" value="2" name="age[]">от 1 до 3</label>
+                <label> <input type="checkbox" value="3" name="age[]">от 3 до 7</label>
+
+            </div> </p> 
+            <div>
+                <span>Замужем/женат</span>
+                <label> <input type="radio" name="read" value="yes">Да</label>
+                <label> <input type="radio" name="read" value="no">Нет</label>
+            </div><!--submit,reset,button-->
+            
+    </form>
+    </section>
+    <input type="submit" value="Отправить" form="anketa" > 
+ 
+</body>
+
+</html>

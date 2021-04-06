@@ -1,0 +1,143 @@
+body {
+    font-size: 20px;
+    margin: 0;
+    background-color: rgb(111, 116, 113);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.image{
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+
+.title {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.specifications,
+.reviews {
+    padding-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+.reviews span {
+    display: block;
+}
+
+.reviews div {
+    padding: 0.7rem;
+}
+
+.reviews div:nth-child(odd) {
+    background-color: whitesmoke;
+}
+
+.reviews div:nth-child(even) {
+    background-color: lightslategray;
+}
+
+.reviews h3,
+.specifications h3 {
+    text-transform: uppercase;
+}
+
+#slider {
+    box-shadow: inset 0 4px 5px 5px rgba(92, 90, 90, 0.5);
+    margin: 1rem;
+    background: url("../img/flowers.jpg");
+}
+
+header,
+footer {
+    background: #dbcdd1;
+}
+
+main {
+    background-color: rgb(143, 203, 221);
+}
+
+#right-aside,
+#left-aside {
+    background-color: rgb(139, 140, 143);
+}
+
+/* grid layout*/
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header" /* первый ряд */
+        "left main right" /* второй ряд */
+        "slider slider slider" /* третий ряд */
+        "footer footer footer"; /* четвертый ряд */
+
+    grid-template-columns: 1fr minmax(500px, 1200px) 1fr;
+    grid-template-rows: 80px auto 40vh 100px;
+}
+
+header {
+    grid-area: header;
+}
+
+#left-aside {
+    grid-area: left;
+}
+
+#right-aside {
+    grid-area: right;
+}
+
+main {
+    grid-area: main;
+}
+
+#slider {
+    grid-area: slider;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    display: grid;
+    grid-template:
+        "image text" /* можно задать высоту первого ряда */
+        "specifications reviews" /* можно задать высоту второго ряда */
+        ". reviews" /* можно задать высоту третьего ряда */
+        ". reviews" /* можно задать высоту четвертого ряда */
+        "similar similar" 200px
+        / 1fr 2fr;
+}
+
+.title {
+    grid-area: text;
+}
+
+.image {
+    grid-area: image;
+}
+
+.specifications {
+    grid-area: specifications;
+}
+
+.reviews {
+    grid-area: reviews;
+}
+
+.similar {
+    grid-area: similar;
+    display: flex;
+}
+
+
+
+
